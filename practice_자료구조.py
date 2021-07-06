@@ -12,17 +12,23 @@
 
 
 # Quiz
-
 from random import *
 
-lst = [1,2,3,4,5]
-shuffle(lst)
-lists = list()
-for i in lst:
-    lists.append(i)
+users_1round = range(1, 21)
+users_1round = list(users_1round)
+shuffle(users_1round)
 
-print(lists)
+first_chicken = sample(users_1round, 1)
 
-a = sample(lists, 3)
-print(a)
+users_2round = list()
 
+for i in users_1round:
+    if i != first_chicken[0]:
+        users_2round.append(i)
+
+second_coffee = sample(users_2round, 3)
+
+print(" -- 당첨자 발표 -- ")
+print("치킨 당첨자 : {}".format(first_chicken))
+print("커피 당첨자 : {}".format(second_coffee))
+print(" -- 축하합니다 -- ")
