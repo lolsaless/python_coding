@@ -17,7 +17,12 @@ from random import *
 
 lst = [1,2,3,4,5]
 shuffle(lst)
-lst_sample = sample(lst, 1)
-print(lst_sample)
+lists = list()
+for i in lst:
+    lists.append(i)
 
-lst
+print(lists)
+
+a = sample(lists, 3)
+print(a)
+
